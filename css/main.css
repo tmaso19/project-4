@@ -27,6 +27,14 @@ h2{
     margin: 0;
     color: #000000;
 }
+h3{
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 400px;
+    margin: 0;
+    color: #c72121;
+}
 a{
     color: #c72121;
 }
@@ -42,7 +50,7 @@ a{
     margin-left: 400px;
     margin-right: 600px;
     margin-bottom: 50px;
-    margin-top: 40px;
+    margin-top: none;
     background-color: #c72121;
     align-items: center;
     justify-content: flex-start;
@@ -70,10 +78,11 @@ text-align: center;
     display: flex;
     align-content: center;
     justify-content: center;
+    margin-bottom: 50px;
     /* margin-left: 50px;
     margin-bottom: 0px; */
     /* margin-top: 10px; */
-    
+
 }
 
 /* hamburger stuff */
@@ -124,4 +133,43 @@ text-align: center;
   .menu:target {
     transform: translateY(0);
   }
+
+  /* contact page */
+  .call-me{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    color: #c72121;
+    font-size: 500px;
+  }
+
+  .contact-icons{
+    display: flex;
+    align-content: flex-end;
+    justify-content: center;
+    gap: 10rem;
+
+    max-width: 100%;
+  }
+
+  /* footer */
+  .footer{
+    text-align: center;
+    background-color: #c72121;
+    font-family: "Lato", sans-serif;
+    font-size: 10px;
+    /* margin-bottom: 0px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    position: bottom;
+     */
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: #000000;
+  text-align: center;
+   
+   }
+
     
