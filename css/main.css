@@ -3,6 +3,7 @@
 }
 body{
     background-color: #000000;
+    
     font-family: "Bebas Neue", sans-serif;
     font-weight: 100;
     font-style: normal;
@@ -86,54 +87,207 @@ text-align: center;
 }
 
 /* hamburger stuff */
-.hamburger {
-    position: fixed;
-    z-index: 99;
-    background: none;
-    color: #ffffff;
-    border: none;
-    cursor: pointer;
-    top: 1rem;
-    right: 1rem;
+
+  .offcanvas-nav {
+    position: relative; /* To position the menu within */
   }
   
-.header{
-    padding: 30px;
-  text-align: center;
-  background: #000000;
-}
-
   .menu {
-    position: fixed;
-    z-index: 100;
-    top: 0;
+    position: fixed; /* Fixed position for overlay effect */
+    top: 20px;
     left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100vh;
-    list-style: none;
-    background: black;
-    display: flex;
-  
-    flex-direction: column;
-    transform: translateY(-100%);
-    transition: transform 0.2s ease;
+    height: 100%;
+    width: 250px; /* Adjust width as needed */
+    background-color: #fff;
+    margin-top: 0px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+    transform: translateX(-100%); /* Initially slide out to the left */
+    transition: transform 0.3s ease; /* Smooth transition */
   }
   
-  .close {
-    position: absolute;
-    border: none;
-    color: white;
-    cursor: pointer;
-    top: 1rem;
-    right: 1rem;
+  .menu.expanded {
+    transform: translateX(0); /* Slide in when expanded */
   }
   
-  .menu:target {
-    transform: translateY(0);
+  .menu-toggle {
+    /* Style the menu button as needed */
+  }
+  
+  
+  @media (min-width: 768px) {
+  .offcanvas-nav {
+      display: block; /* Show the full navigation on larger screens */
+    }
+  .menu {
+      display: block; /* Ensure menu is visible on larger screens */
+      position: static; /* Remove fixed positioning */
+      width: auto;
+      transform: none; /* No need for transitions */
+      box-shadow: none;
+    }
+  .menu-toggle {
+      display: none; /* Hide the toggle button on larger screens */
+    }
   }
 
+
+  /* about me page */
+
+  .about-me{
+    background-image: linear-gradient(#c72121, #2f0606);
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 0px;
+    margin-bottom: 50px;
+    height: 600px;
+    width: 1000px;
+
+
+  }
+
+  .about-me-image{
+    display: flex;
+    justify-content: space-around;
+    width: 500px;
+    height: 500px;
+    object-position: right 20px;
+    object-position: top 100px;
+  }
+
+  .about-me-text{
+    display: flex;
+    flex-direction: column;
+   
+  }
+
+
+  /* project page */
+
+  .design-title{
+    background-color: #c72121;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 3rem;
+    margin-left: 500px;
+    width: 500px;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    display: flex;
+  }
+
+  .cup-images{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 3rem;
+    flex-wrap: wrap;
+  }
+
+  .my-street{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* justify-content: space-between; */
+    flex-direction: row;
+    gap: 3rem;
+    margin-top: 2rem;
+  }
+
+  .imaging-title{
+    background-color: #c72121;
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    margin-left: 500px;
+    width: 500px;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    display: flex;
+  }
+
+  .imaging-images{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 3rem;
+    flex-wrap: wrap;
+  }
+  
+  .infographics-title{
+    background-color: #c72121;
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    margin-left: 500px;
+    width: 500px;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    display: flex;
+  }
+
+  .alone-images{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    flex-direction: row;
+    gap: 3rem;
+    flex-wrap: wrap;
+  }
+
+  .rhode-pics{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 3rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .hollywood-pics{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  #myBtn {
+    display: none; /* Hidden by default */
+    align-content: center;
+    position: fixed; /* Fixed/sticky position */
+    bottom: 50px; 
+    right: 600px; 
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #c72121; /* Set a background color */
+    width: 200px;
+    color: #000000; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    /* border-radius: 10px; Rounded corners */
+    font-size: 30px; /* Increase font size */
+  }
+  
+  #myBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+  }
+ 
   /* contact page */
   .call-me{
     display: flex;
@@ -148,7 +302,7 @@ text-align: center;
     align-content: flex-end;
     justify-content: center;
     gap: 10rem;
-
+    margin-bottom: 50px;
     max-width: 100%;
   }
 
@@ -158,18 +312,12 @@ text-align: center;
     background-color: #c72121;
     font-family: "Lato", sans-serif;
     font-size: 10px;
-    /* margin-bottom: 0px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    position: bottom;
-     */
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  color: #000000;
-  text-align: center;
-   
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: #000000;
+    text-align: center;
    }
 
     
